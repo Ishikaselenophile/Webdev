@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import json
-app = Flask(_name_)
+app = Flask(__name__)
 
 
 @app.route('/')
@@ -45,5 +45,5 @@ def compute():
 
         print(value,options)
         return response
-if(_name=='main_'):
+if(__name__=='__main__'):
     app.run(host='0.0.0.0',debug=False)
