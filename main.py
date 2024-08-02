@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 import json
-app = Flask(__name__)
+app = Flask(_name_)
 
 
 @app.route('/')
 def index():
-    return render_template('index.html',title='RA2111031010088')
+    return render_template('index.html',title='RA2111031010095')
 
 @app.route('/bfhl',methods=['get','post'])
 def compute():
@@ -20,8 +20,8 @@ def compute():
         value = request.form.get('json')
         options = request.form.getlist('multiple')
         response['success']= True
-        response['user_id']='Ishika_Gupta_18022004'
-        response['rollno']='RA2111031010088'
+        response['user_id']='DeepakKailash_Balamurugan_18022004'
+        response['rollno']='RA2111031010095'
         value = json.loads(value)
 
         for i in options:
@@ -45,5 +45,5 @@ def compute():
 
         print(value,options)
         return response
-if(__name__=='__main__'):
-    app.run(debug=True)
+if(_name=='main_'):
+    app.run(host='0.0.0.0',debug=False)
